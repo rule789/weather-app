@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent = '' ;
 
 
-    fetch( process.env.PORT +'/weather?address=' + location).then((response) => {
+    fetch( window.location.origin +'/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             // console.log(data);
             if (data.error) {
